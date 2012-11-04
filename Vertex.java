@@ -15,6 +15,8 @@ public class Vertex {
 
     boolean visited; // whether vertex has been visited in a traversal
     int predecessor; // index of predecessor vertex in a traversal
+    
+    int number; // The number stored at this vertex.
 
     /**
 	 creates a new instance of Vertex
@@ -60,6 +62,14 @@ public class Vertex {
     
     public void setPredecessor(int n){
     	predecessor = n;
+    }
+    
+    public int getNumber() {
+        return number;
+    }
+    
+    public void setNumber(int n) {
+        number = n;
     }
     
     public void addToAdjList(int n, int w){
