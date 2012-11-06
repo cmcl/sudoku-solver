@@ -1,3 +1,4 @@
+import javax.swing.*;
 
 /**
  * Main class that solves a Sudoku puzzle.
@@ -10,6 +11,19 @@ public class Sudoku {
 
     public static void main(String[] args) {
         Graph g = new Graph(NUM_VERTICES);
+        
+        for (Vertex v : g.getVertices()) {
+            v.setNumber(0);
+        }
+        
+        // show gui
+        final SudokuView view = new SudokuView(g);
+        
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                view.setupGui();
+            }
+        });
         
         // input numbers in g from user
         
