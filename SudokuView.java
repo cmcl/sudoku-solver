@@ -22,6 +22,15 @@ public class SudokuView extends JFrame
         tabModel = new SudokuTableModel(this, g);
         tabModel.addTableModelListener(this);
         table = new JTable(tabModel);
+        
+        // set preferred column widths
+        TableColumn column = null;
+        for (int i = 0; i < 9; i++) {
+            column = table.getColumnModel().getColumn(i);
+            column.setPreferredWidth(25);
+        }
+        
+        
         solve = new JButton("Solve");
         solve.addActionListener(this);
         mainPanel.add(table);
@@ -36,6 +45,7 @@ public class SudokuView extends JFrame
             tabModel.setEditable(false);
             tabModel.fireTableStructureChanged();
             solve.setEnabled(false);
+            new Colour().colour(g);
         }
     }
     

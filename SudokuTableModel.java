@@ -25,7 +25,8 @@ public class SudokuTableModel extends AbstractTableModel {
     }
     
     public Object getValueAt(int row, int column) {
-        return g.getVertex(row * 9 + column).getNumber();
+        int n = g.getVertex(row * 9 + column).getNumber();
+        return n >= 1 && n <= 9 ? n : null;
     }
     
     public void setValueAt(Object value, int row, int col) {
