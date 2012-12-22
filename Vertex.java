@@ -25,6 +25,7 @@ public class Vertex {
     	adjList = new LinkedList<AdjListNode>();
     	index = n;
     	visited = false;
+        number = -1; // undefined initially.
     }
     
     /**

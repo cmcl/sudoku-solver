@@ -16,5 +16,10 @@ public class Colour implements GraphColouring {
      * the colouring of the graph.
      */
     public void colour(Graph g) {
+        // make work lists
+        // simplify
+        // coalesce
+        // freeze?
+        // spill
     }
 }
